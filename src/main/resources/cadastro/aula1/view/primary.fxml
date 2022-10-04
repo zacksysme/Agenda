@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="BOTTOM_CENTER" prefHeight="617.0" prefWidth="597.0" spacing="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cadastro.aula1.view.PrimaryController">
+   <children>
+      <Pane prefHeight="476.0" prefWidth="557.0" style="-fx-background-color: FFFFF0;">
+         <children>
+            <TextField fx:id="editNome" alignment="TOP_LEFT" layoutX="31.0" layoutY="60.0" prefHeight="25.0" prefWidth="511.0" promptText="Digite seu nome aqui">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Label layoutX="31.0" layoutY="22.0" prefHeight="17.0" prefWidth="518.0" text="Nome completo">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="124.0" prefHeight="17.0" prefWidth="518.0" text="Telefone">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="editTelefone" alignment="TOP_LEFT" layoutX="28.0" layoutY="162.0" prefHeight="25.0" prefWidth="511.0" promptText="(99) 9999 9999">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Label layoutX="25.0" layoutY="219.0" prefHeight="17.0" prefWidth="518.0" text="Sexo">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="editSexoMasculino" layoutX="28.0" layoutY="257.0" mnemonicParsing="false" text="Masculino">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="sexo" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="editSexoFemino" layoutX="220.0" layoutY="257.0" mnemonicParsing="false" text="Feminino" toggleGroup="$sexo">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="editSexcoOutros" layoutX="403.0" layoutY="257.0" mnemonicParsing="false" text="Outros" toggleGroup="$sexo">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </RadioButton>
+            <Label layoutX="31.0" layoutY="302.0" prefHeight="17.0" prefWidth="518.0" text="Notações">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="editNotacoes" layoutX="28.0" layoutY="338.0" prefHeight="103.0" prefWidth="511.0" />
+         </children>
+      </Pane>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: ccc;">
+         <children>
+            <Button defaultButton="true" onAction="#salvarDados" prefHeight="25.0" prefWidth="143.0" text="Cadastro">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="10.0" onAction="#switchToSecondary" prefHeight="25.0" prefWidth="146.0" text="Lista">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
